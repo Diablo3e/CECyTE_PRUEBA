@@ -1,0 +1,148 @@
+.footer {
+    background: linear-gradient(to bottom, #8B0000, #3B0000);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Para distribuir los elementos a la izquierda y derecha */
+    align-items: flex-start; /* Alinea todos los elementos al inicio (arriba) */
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten si es necesario */
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: flex-start; /* Alinea el logo a la izquierda */
+    align-items: center; /* Alinea verticalmente el logo con el texto */
+    margin-right: 40px;
+}
+
+.footer-logo img {
+    width: 120px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin-top: 20px;
+}
+.footer-section p strong {
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+.footer-section p {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el ícono y el texto */
+    margin-bottom: 10px; /* Espacio entre los elementos */
+}
+
+.location-icon {
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+    font-size: 20px; /* Ajusta el tamaño del icono si es necesario */
+}
+
+.footer-section {
+    margin: 10px;
+    text-align: left;
+    width: 22%; /* Ajusta este valor según la cantidad de contenido */
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-info-icons {
+    display: flex;
+    justify-content: center; /* Centra las imágenes y las agrupa más */
+    width: 100%;
+    margin-top: 40px;
+}
+
+.footer-info-icons img {
+    width: 120px; /* Ajusta el tamaño de las imágenes según lo necesites */
+    margin: 0 10px; /* Reduce el margen entre las imágenes */
+    height: auto;
+}
+.footer-social {
+    display: flex;
+    justify-content: flex-end; /* Alinea las redes sociales a la derecha */
+    width: 100%;
+    margin-top: 40px;
+}
+
+.footer-social span {
+    margin-right: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.social-icons img {
+    width: 30px;
+    height: auto;
+    margin: 5px;
+}
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Cuando la pantalla sea pequeña (máximo 768px) */
+    .footer-content {
+        flex-direction: column; /* Los apartados se apilan verticalmente */
+        align-items: flex-start; /* Alinea los apartados a la izquierda */
+    }    
+    .footer-logo-container {
+        flex-direction: column; /* Los elementos se apilan verticalmente */
+        align-items: flex-start; /* Alinea los elementos a la izquierda */
+    }
+
+    .footer-logo img {
+        width: 100px; /* Reducir el tamaño del logo en pantallas pequeñas */
+    }
+
+    .footer-text {
+        font-size: 14px; /* Reducir el tamaño del texto en pantallas pequeñas */
+    }
+    .footer-section {
+        width: 100%; /* Hace que cada sección ocupe todo el ancho disponible */
+        margin-bottom: 20px; /* Añade espacio entre las secciones */
+    }
+
+    .footer-section h3 {
+        font-size: 16px; /* Ajusta el tamaño del título en pantallas pequeñas */
+    }
+
+    .footer-section ul li {
+        font-size: 14px; /* Ajusta el tamaño del texto en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-logo img {
+        width: 100px; /* Reducir el tamaño del logo en pantallas muy pequeñas */
+    }
+
+    .footer-section h3 {
+        font-size: 16px; /* Reducir tamaño de los títulos */
+    }
+
+    .footer-section ul li {
+        font-size: 14px; /* Reducir el tamaño de los elementos de la lista */
+    }
+}
