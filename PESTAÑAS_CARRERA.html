@@ -17,7 +17,7 @@
         .tab {
             padding: 10px 20px;
             cursor: pointer;
-            background: #ccc;
+            background: #9b8c8c;
             margin-right: 5px;
             border-radius: 5px;
         }
@@ -52,6 +52,24 @@
             flex: 1; /* Hace que los elementos sean flexibles */
             max-width: 300px;
         }
+        @media (max-width: 768px) {
+    .program img {
+        display: none;
+    }
+    .tabs {
+    display: flex;
+    overflow-x: auto; /* Permite desplazamiento horizontal si es necesario */
+    white-space: nowrap; /* Evita que los elementos se vayan a la siguiente línea */
+    scrollbar-width: none; /* Oculta la barra de desplazamiento en Firefox */
+    -ms-overflow-style: none; /* Oculta la barra de desplazamiento en Internet Explorer */
+}
+
+.tabs::-webkit-scrollbar {
+    display: none; /* Oculta la barra de desplazamiento en Chrome y Edge */
+}
+
+}
+  
     </style>
 </head>
 <body>
@@ -179,6 +197,12 @@
             document.getElementById('details').classList.remove('active');
             document.getElementById(lastActiveTab).classList.add('active');
         }
+        document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', function() {
+        // Desplazar la pestaña seleccionada a la vista
+        tab.scrollIntoView({ behavior: 'smooth', inline: 'center' });
+            });
+        });
 
     </script>
 </body>
