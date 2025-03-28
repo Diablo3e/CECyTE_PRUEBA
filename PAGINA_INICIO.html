@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Navegación</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Barra de navegación */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background: #8B0000;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            margin: 0 10px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .navbar a:hover, .navbar a.active {
+            background: white;
+            color: #8B0000;
+            border-radius: 5px;
+        }
+
+        /* Contenedor principal con fondo en una parte */
+        .inicio-container {
+            margin-top: 160px; 
+            display: flex;
+            align-items: flex-start;
+            width: 100%;
+            min-height: 70vh;
+            position: relative; /* Para que el fondo solo esté en esta parte */
+            padding: 20px;
+        }
+
+        /* Fondo en una parte de la sección */
+        .background-box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width:100%; /* Ajusta el tamaño del fondo */
+            height: 75%;
+            background-image: url('https://cecytepuebla.edu.mx/wp-content/uploads/2024/12/FotoPortadaWeb.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: -1; /* Para que quede detrás del formulario */
+        }
+
+        /* Formulario alineado a la izquierda */
+        .form-container {
+            width: 25%;
+            z-index: 1; /* Asegura que el formulario esté encima */
+        }
+
+        iframe {
+            width: 100%;
+            height: 80vh;
+            border: none;
+        }
+
+        /* Sección de información al lado derecho */
+        .info-container {
+            width: 48%;
+            padding: 20px;
+            text-align: left;
+        }
+
+        /* Imagen al final */
+        .footer-image-container {
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        .footer-image-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .footer-text {
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .inicio-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .background-box {
+                width: 100%;
+                height: 40vh;
+            }
+
+            .form-container, .info-container {
+                width: 100%;
+                padding-left: 0;
+            }
+
+            iframe {
+                width: 100%;
+                height: 60vh;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar a {
+                font-size: 16px;
+            }
+
+            iframe {
+                width: 100%;
+                height: 50vh;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <div class="navbar">
+        <a href="#" class="tab-link active" data-tab="inicio">Inicio</a>
+    </div>
+
+    <!-- Sección con imagen de fondo en una parte -->
+    <div class="inicio-container">
+        <div class="background-box"></div>
+        <div class="form-container">
+            <iframe src="https://diablo3e.github.io/PRUEBA2/FORMU.html" scrolling="no" frameborder="0"></iframe>
+        </div>
+    </div>
+    <div class="inicio-container">
+        <iframe src="PESTAÑAS_CARRERA.html" width="100%" height="500px" frameborder="0"></iframe>
+    </div>
+    <div class="inicio-container">
+        <iframe src="mapa_carrusel.html" width="100%" height="500px" frameborder="0"></iframe>
+    </div>
+
+    
+    <!-- Segunda imagen al final con texto -->
+<!-- Footer con estilo similar a la imagen -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Logo centrado -->
+        <div class="footer-logo">
+            <img src="https://cecytepuebla.edu.mx/wp-content/uploads/elementor/thumbs/Recurso-1@300x-8-qp4qt315crdyuz9h3a3dt1fo0avs7z00hd9kwb6oxk.png" alt="CECyTE Logo">
+        </div>
+
+        <div class="footer-content">
+            <!-- Sección de contacto -->
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p><strong>📞 22 29 62 11 26 ext.101</strong></p>
+                <p>✉ Escríbenos</p>
+                <p><span class="location-icon">📍</span> Colorines 2, Bello Horizonte, 72700 Puebla, Pue.</p>
+                <p>📌 Ubicación</p>
+            </div>
+            
+            <!-- Enlaces -->
+            <div class="footer-section">
+                <h3>Enlaces</h3>
+                <ul>
+                    <li>Admisión</li>
+                    <li>Contacto</li>
+                    <li>Carreras</li>
+                    <li>Directorio</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Transparencia</h3>
+                <ul>
+                    <li>Código de Ética</li>
+                    <li>Código de Conducta</li>
+                    <li>Portal Dirección General</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Políticas</h3>
+                <ul>
+                    <li>Política de Igualdad</li>
+                    <li>Política de Calidad</li>
+                    <li>Catálogo de Convenios</li>
+                    <li>Podcast</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Íconos de información -->
+        <div class="footer-info-icons">
+            <a href="https://consultapublicamx.plataformadetransparencia.org.mx/vut-web/faces/view/consultaPublica.xhtml?idEntidad=MjE=&idSujetoObligado=NDIwNg==#inicio" target="_blank">
+                <img src="https://cecytepuebla.edu.mx/wp-content/uploads/elementor/thumbs/logo-pnt-pjckdpo5vb0iakjov9esqkwc3l3u58mj0gv9ks9t90.png" alt="Información pública">
+            </a>
+            <a href="https://consultapublicamx.plataformadetransparencia.org.mx/vut-web/faces/view/consultaPublica.xhtml?idEntidad=MjE=&idSujetoObligado=NDIwNg==#inicio" target="_blank">
+                <img src="https://cecytepuebla.edu.mx/wp-content/uploads/elementor/thumbs/logo-obligaciones-pjckdkyyx4u2oiqimpdnw4314nr02r3vbtlu6egs44.png" alt="Obligaciones de transparencia">
+            </a>
+        </div>
+
+        <!-- Redes sociales -->
+        <div class="footer-social">
+            <div class="social-icons">
+                <a href="https://x.com/CECyTEPUE" target="_blank">
+                    <img src="https://img.icons8.com/?size=100&id=01GWmP9aUoPj&format=png&color=000000" alt="Twitter">
+                </a>
+                <a href="https://www.facebook.com/CECyTEPUE/" target="_blank">
+                    <img src="https://img.icons8.com/?size=100&id=118466&format=png&color=000000" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/cecytepue/" target="_blank">
+                    <img src="https://img.icons8.com/?size=100&id=dz63urxyxSdO&format=png&color=000000" alt="Instagram">
+                </a>
+                <a href="https://www.youtube.com/c/CECyTEPUE" target="_blank">
+                    <img src="https://img.icons8.com/?size=100&id=37326&format=png&color=000000" alt="YouTube">
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- CSS para estilizar -->
+<style>
+.footer {
+    background: linear-gradient(to bottom, #8B0000, #3B0000);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Para distribuir los elementos a la izquierda y derecha */
+    align-items: flex-start; /* Alinea todos los elementos al inicio (arriba) */
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten si es necesario */
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: flex-start; /* Alinea el logo a la izquierda */
+    align-items: center; /* Alinea verticalmente el logo con el texto */
+    margin-right: 40px;
+}
+
+.footer-logo img {
+    width: 120px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin-top: 20px;
+}
+.footer-section p strong {
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+.footer-section p {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el ícono y el texto */
+    margin-bottom: 10px; /* Espacio entre los elementos */
+}
+
+.location-icon {
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+    font-size: 20px; /* Ajusta el tamaño del icono si es necesario */
+}
+
+.footer-section {
+    margin: 10px;
+    text-align: left;
+    width: 22%; /* Ajusta este valor según la cantidad de contenido */
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-info-icons {
+    display: flex;
+    justify-content: center; /* Centra las imágenes y las agrupa más */
+    width: 100%;
+    margin-top: 40px;
+}
+
+.footer-info-icons img {
+    width: 120px; /* Ajusta el tamaño de las imágenes según lo necesites */
+    margin: 0 10px; /* Reduce el margen entre las imágenes */
+    height: auto;
+}
+.footer-social {
+    display: flex;
+    justify-content: flex-end; /* Alinea las redes sociales a la derecha */
+    width: 100%;
+    margin-top: 40px;
+}
+
+.footer-social span {
+    margin-right: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.social-icons img {
+    width: 30px;
+    height: auto;
+    margin: 5px;
+}
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Cuando la pantalla sea pequeña (máximo 768px) */
+    .footer-content {
+        flex-direction: column; /* Los apartados se apilan verticalmente */
+        align-items: flex-start; /* Alinea los apartados a la izquierda */
+    }    
+    .footer-logo-container {
+        flex-direction: column; /* Los elementos se apilan verticalmente */
+        align-items: flex-start; /* Alinea los elementos a la izquierda */
+    }
+
+    .footer-logo img {
+        width: 100px; /* Reducir el tamaño del logo en pantallas pequeñas */
+    }
+
+    .footer-text {
+        font-size: 14px; /* Reducir el tamaño del texto en pantallas pequeñas */
+    }
+    .footer-section {
+        width: 100%; /* Hace que cada sección ocupe todo el ancho disponible */
+        margin-bottom: 20px; /* Añade espacio entre las secciones */
+    }
+
+    .footer-section h3 {
+        font-size: 16px; /* Ajusta el tamaño del título en pantallas pequeñas */
+    }
+
+    .footer-section ul li {
+        font-size: 14px; /* Ajusta el tamaño del texto en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-logo img {
+        width: 100px; /* Reducir el tamaño del logo en pantallas muy pequeñas */
+    }
+
+    .footer-section h3 {
+        font-size: 16px; /* Reducir tamaño de los títulos */
+    }
+
+    .footer-section ul li {
+        font-size: 14px; /* Reducir el tamaño de los elementos de la lista */
+    }
+}
+</style>
+
+
+</body>
+</html>
